@@ -12,7 +12,7 @@ const Table = ({ item, query }) => {
     } else {
       setCategory(item.categories);
     }
-  }, [query]);
+  }, [query, item]);
 
   return (
     <div>
@@ -21,8 +21,8 @@ const Table = ({ item, query }) => {
           <tr>
             <th>categories</th>
           </tr>
-          {category.map((data, i) => (
-            <tr key={i}>
+          {category.map((data, id) => (
+            <tr key={id}>
               <td>{data}</td>
             </tr>
           ))}

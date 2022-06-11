@@ -5,7 +5,7 @@ import Table from "./component/Table";
 function App() {
   const [item, setItem] = useState({
     count: 0,
-    categories: []
+    categories: [],
   });
   const [query, setQuery] = useState("");
   useEffect(() => {
@@ -28,7 +28,6 @@ function App() {
   return (
     <div className="App">
       <h2>Search</h2>
-
       <input
         id="myInput"
         placeholder="Search for ..."
@@ -37,7 +36,6 @@ function App() {
         className="input"
         value={query}
       />
-
       <Table item={item} query={query} />
     </div>
   );
